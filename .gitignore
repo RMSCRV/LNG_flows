@@ -1,0 +1,21 @@
+.env
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/external/
+# data/raw/external/ holds small one-off input files (TTF, JKM proxy, freight
+# proxy) that aren't downloadable from a public bulk URL like the EIA file
+# is -- tracked so calibration is reproducible without re-sourcing them.
+data/processed/*
+!data/processed/.gitkeep
+!data/processed/calibration/
+!data/processed/combined/
+# calibration/hub_params.json and combined/monthly_aligned.csv are small
+# derived outputs (not raw downloads) that dashboard/pipeline.py reads
+# directly -- tracked so a fresh clone (e.g. Streamlit Community Cloud)
+# can run the dashboard without first re-running notebooks 01-02.
+data/checks/*
+!data/checks/.gitkeep
+__pycache__/
+*.pyc
+.venv/
+venv/

@@ -1,0 +1,158 @@
+{
+  "primary": {
+    "HENRY_HUB": {
+      "name": "HENRY_HUB",
+      "s_bar": 3.4212047050899983,
+      "theta": 2.034291210431814,
+      "sigma": 0.8103945264817684,
+      "jump_prob": 0.0,
+      "jump_mu": 0.0,
+      "jump_sigma": 0.0,
+      "dt": 0.08333333333333333,
+      "source": "calibrated",
+      "notes": "AR(1)-fit to 67 observations; 0 steps flagged as jumps"
+    },
+    "TTF": {
+      "name": "TTF",
+      "s_bar": 38.554990465431295,
+      "theta": 1.4877263463356365,
+      "sigma": 0.5273221056476585,
+      "jump_prob": 0.015151515151515152,
+      "jump_mu": 0.0,
+      "jump_sigma": 0.0,
+      "dt": 0.08333333333333333,
+      "source": "calibrated",
+      "notes": "AR(1)-fit to 67 observations; 1 steps flagged as jumps"
+    },
+    "JKM": {
+      "name": "JKM",
+      "s_bar": 15.465825862225698,
+      "theta": 1.4570271969822057,
+      "sigma": 0.6655632829640987,
+      "jump_prob": 0.015151515151515152,
+      "jump_mu": 0.0,
+      "jump_sigma": 0.0,
+      "dt": 0.08333333333333333,
+      "source": "calibrated",
+      "notes": "AR(1)-fit to 67 observations; 1 steps flagged as jumps"
+    },
+    "FREIGHT_ATLANTIC": {
+      "name": "FREIGHT_ATLANTIC",
+      "s_bar": 52883.37201806412,
+      "theta": 2.145415274731839,
+      "sigma": 0.7504929712634284,
+      "jump_prob": 0.0,
+      "jump_mu": 0.0,
+      "jump_sigma": 0.0,
+      "dt": 0.08333333333333333,
+      "source": "calibrated",
+      "notes": "AR(1)-fit to 32 observations; 0 steps flagged as jumps"
+    },
+    "FREIGHT_PACIFIC": {
+      "name": "FREIGHT_PACIFIC",
+      "s_bar": 47993.65125222438,
+      "theta": 1.6943205043300664,
+      "sigma": 0.657835773291386,
+      "jump_prob": 0.0,
+      "jump_mu": 0.0,
+      "jump_sigma": 0.0,
+      "dt": 0.08333333333333333,
+      "source": "calibrated",
+      "notes": "AR(1)-fit to 32 observations; 0 steps flagged as jumps"
+    }
+  },
+  "full_history_reference": {
+    "HENRY_HUB": {
+      "name": "HENRY_HUB",
+      "s_bar": 3.6398022072694305,
+      "theta": 0.726667407015416,
+      "sigma": 0.4486597477354245,
+      "jump_prob": 0.022598870056497175,
+      "jump_mu": -0.15401399731683219,
+      "jump_sigma": 0.6227644560942489,
+      "dt": 0.08333333333333333,
+      "source": "calibrated",
+      "notes": "AR(1)-fit to 355 observations; 8 steps flagged as jumps"
+    },
+    "TTF": {
+      "name": "TTF",
+      "s_bar": 85.23850415602757,
+      "theta": 0.04081822720583883,
+      "sigma": 0.3217726696296212,
+      "jump_prob": 0.022598870056497175,
+      "jump_mu": 0.13951480239025826,
+      "jump_sigma": 0.5273984951017202,
+      "dt": 0.08333333333333333,
+      "source": "calibrated",
+      "notes": "AR(1)-fit to 355 observations; 8 steps flagged as jumps"
+    },
+    "JKM": {
+      "name": "JKM",
+      "s_bar": 9.88858902664418,
+      "theta": 0.2918655121431515,
+      "sigma": 0.3734213202855598,
+      "jump_prob": 0.01977401129943503,
+      "jump_mu": 0.021779123940303173,
+      "jump_sigma": 0.6796453996497738,
+      "dt": 0.08333333333333333,
+      "source": "calibrated",
+      "notes": "AR(1)-fit to 355 observations; 7 steps flagged as jumps"
+    }
+  },
+  "correlation": {
+    "hub_order": [
+      "HENRY_HUB",
+      "TTF",
+      "JKM",
+      "FREIGHT_ATLANTIC",
+      "FREIGHT_PACIFIC"
+    ],
+    "matrix": [
+      [
+        1.0,
+        0.19960584410578305,
+        0.04891955228369014,
+        0.09397740578377356,
+        0.17461687535303316
+      ],
+      [
+        0.19960584410578308,
+        1.0,
+        0.7,
+        0.05849566645411083,
+        -0.008105680033393646
+      ],
+      [
+        0.04891955228369014,
+        0.7,
+        0.9999999999999998,
+        -0.1897030454845509,
+        -0.08421248395598836
+      ],
+      [
+        0.09397740578377357,
+        0.058495666454110834,
+        -0.18970304548455091,
+        0.9999999999999999,
+        0.6523733093671857
+      ],
+      [
+        0.17461687535303316,
+        -0.008105680033393646,
+        -0.08421248395598836,
+        0.6523733093671857,
+        1.0
+      ]
+    ],
+    "window": [
+      "2024-01-01",
+      "2026-07-01"
+    ]
+  },
+  "notes": {
+    "JKM": "Japan LNG import price (customs-cleared average), used as a JKM proxy -- not official Platts JKM.",
+    "FREIGHT": "Spark30S/25S proxy dataset, not verified against Spark Commodities' own published values.",
+    "TTF": "2023-01 onward reconstructed from documented anchor points, not observed data -- see the 'TTF data quality issue' section above. Pre-2023 values are from the supplied file as-is.",
+    "calibration_window": "Primary params fit on 2021-01-01 onward (recent regime); full-history fit included for context only."
+  }
+}
